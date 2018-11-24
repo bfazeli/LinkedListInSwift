@@ -2,7 +2,7 @@ import Foundation
 
 extension LinkedList: CustomStringConvertible {
     public var description: String {
-        guard let head = head else {
+        guard let head = getHead() else {
             return "Empty List"
         }
         

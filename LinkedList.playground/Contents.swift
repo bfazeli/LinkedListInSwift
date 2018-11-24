@@ -33,4 +33,15 @@ running(example: "Append") {
     print(linkedList)
 }
 
-
+running(example: "Inserting at a particular index") {
+    var list = LinkedList<Int>()
+    list.push(3)
+    list.push(2)
+    list.push(1)
+    
+    print("Before inserting: \(list)")
+    
+    list.insert(-1, after: list.node(at: 1)!)
+    
+    print("After inserting: \(list)")
+}
