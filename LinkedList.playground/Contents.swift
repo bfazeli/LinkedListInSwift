@@ -12,3 +12,13 @@ running(example: "Creating and linking Nodes") {
     
     print(node1)
 }
+
+running(example: "Push") {
+    var linkedList = LinkedList<Int>()
+    
+    linkedList.push(3)
+    linkedList.push(2)
+    linkedList.push(1)
+    
+    print(linkedList)
+}
