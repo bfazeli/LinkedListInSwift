@@ -22,3 +22,15 @@ running(example: "Push") {
     
     print(linkedList)
 }
+
+running(example: "Append") {
+    var linkedList = LinkedList<Int>()
+    
+    linkedList.append(1)
+    linkedList.append(2)
+    linkedList.append(3)
+    
+    print(linkedList)
+}
+
+
