@@ -76,3 +76,20 @@ running(example: "Remove last") {
     
     print("After removing the last element in the list: \(list)")
 }
+
+running(example: "Removing at a particular index") {
+    var list = LinkedList<Int>()
+    list.push(3)
+    list.push(2)
+    list.push(1)
+    
+    print("Before removing element from the list: \(list)")
+    
+    let index = 2
+    
+    if let node = list.node(at: index), let val = list.remove(after: node) {
+        print("Removed element after index: \(index), is \(val)")
+    }
+    
+    print("After removing the element in the list: \(list)")
+}
