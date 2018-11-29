@@ -94,4 +94,29 @@ public struct LinkedList<Value> {
         
         return head?.value
     }
+    
+    public mutating func removeLast() -> Value? {
+        // If head is nil just simply return nil as there are no elements in the linkedlist
+        guard let head = head else {
+            return nil
+        }
+
+        // If only one element in the list remove and return it
+        guard head.next != nil else {
+            return pop()
+        }
+
+        // Otherwise traverse through until there are no more elements
+        var current = head
+        var previous = head
+        while let next = current.next {
+            previous = current
+            current = next
+        }
+
+        previous.next = nil
+        tail = previous
+        
+        return current.value
+    }
 }

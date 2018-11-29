@@ -61,3 +61,18 @@ running(example: "Pop") {
     print("After popping the list: \(list)")
     
 }
+
+running(example: "Remove last") {
+    var list = LinkedList<Int>()
+    list.push(3)
+    list.push(2)
+    list.push(1)
+    
+    print("Before removing the last element in the list: \(list)")
+    
+    if let val = list.removeLast() {
+        print("Last element removed was: " + String(describing: val))
+    }
+    
+    print("After removing the last element in the list: \(list)")
+}
