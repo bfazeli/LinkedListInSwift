@@ -79,4 +79,19 @@ public struct LinkedList<Value> {
         
         return currentNode
     }
+    
+    // MARK: Removable methods
+    
+    @discardableResult
+    public mutating func pop() -> Value? {
+        // Removes the node at head after execution of current scope.
+        defer {
+            head = head?.next
+            if isEmpty {
+                tail = nil
+            }
+        }
+        
+        return head?.value
+    }
 }

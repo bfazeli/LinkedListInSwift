@@ -45,3 +45,19 @@ running(example: "Inserting at a particular index") {
     
     print("After inserting: \(list)")
 }
+
+running(example: "Pop") {
+    var list = LinkedList<Int>()
+    list.push(3)
+    list.push(2)
+    list.push(1)
+    
+    print("Before popping list: \(list)")
+    
+    if let val = list.pop() {
+        print("Popped value: " + String(describing: val))
+    }
+    
+    print("After popping the list: \(list)")
+    
+}
